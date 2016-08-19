@@ -19,11 +19,7 @@ public class RouteController {
 	
 	@Autowired
 	RouteService routeService;
-	
-    public RouteController(){
-    	logger.info("initt");
-    }
-	
+
 	@RequestMapping(value="direct/{dep_sid}/{arr_sid}")	
 	public @ResponseBody DirectRouteResponse direct(Model model, @PathVariable("dep_sid") Integer depSid, @PathVariable("arr_sid") Integer arrSid) throws IOException{
 		logger.info("direct: depSid:" + depSid + ", arrSid:" + arrSid);
